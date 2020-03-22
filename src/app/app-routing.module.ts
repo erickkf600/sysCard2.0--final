@@ -1,49 +1,23 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from '@app/auth';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'about',
-    pathMatch: 'full'
+    redirectTo: '/admin',
+    pathMatch: 'full',
+    canActivate: [AuthGuard]
   },
   {
-    path: 'about',
-    loadChildren: () =>
-      import('./features/about/about.module').then(m => m.AboutModule)
-  },
-  {
-    path: 'feature-list',
-    loadChildren: () =>
-      import('./features/feature-list/feature-list.module').then(
-        m => m.FeatureListModule
-      )
-  },
-  {
-    path: 'settings',
-    loadChildren: () =>
-      import('./features/settings/settings.module').then(m => m.SettingsModule)
-  },
-  {
-    path: 'examples',
-    loadChildren: () =>
-      import('./features/examples/examples.module').then(m => m.ExamplesModule)
-  },
-  {
-    path: '**',
-    redirectTo: 'about'
+    path: 'admin',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./main/main.module').then(m => m.MainModule)
   }
 ];
 
 @NgModule({
-  // useHash supports github.io demo page, remove in your app
-  imports: [
-    RouterModule.forRoot(routes, {
-      useHash: true,
-      scrollPositionRestoration: 'enabled',
-      preloadingStrategy: PreloadAllModules
-    })
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

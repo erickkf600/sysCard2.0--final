@@ -1,0 +1,18 @@
+mat-toolbar {
+  position: relative;
+  z-index: 4;
+  mat-toolbar-row{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.menu-bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  .menu-button {
+    height: 100%;
+    border-radius: 0;
+  }
+}
+

@@ -1,90 +1,247 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 <head>
-  <base href="/">
-  <title>AngularNgrxMaterialStarter</title>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:title" content="Angular NgRx Material Starter Project by @tomastrajan">
-  <meta property="og:description" content="Angular NgRx Material Starter project with all the best practices, features and usage examples">
-  <meta property="og:image" content="/angular-ngrx-material-starter/intro.3e2d7713f2cb475efa85.jpg">
-  <meta property="og:url" content="https://tomastrajan.github.io/angular-ngrx-material-starter">
+  <base href="/">
+  <title>Sys Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Material Ngrx Material starter project">
+  <meta name="keywords" content="HTML,CSS,AngularJS,Angular,Angular 2,Angular 4,Angular 5,Angular 6,Angular 7,Angular 8,Material,Material 2, Ngrx, Starter, Angular Starter, Material Design Admin Template, Dashboard, Admin">
 
-  <link rel="icon" type="image/png" href="./assets/logo.png">
-  <style type="text/css">
-    body, html {
-      height: 100%;
-    }
-    .app-loading {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Angular NgRx Material starter">
+  <meta property="og:description" content="Material Ngrx Material starter project">
 
-    .app-loading .spinner {
-      height: 200px;
-      width: 200px;
-      animation: rotate 2s linear infinite;
-      transform-origin: center center;
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+  <style>
+    #splash-screen {
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 0;
       right: 0;
-      margin: auto;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
     }
 
-    .app-loading .spinner .path {
-      stroke-dasharray: 1, 200;
-      stroke-dashoffset: 0;
-      animation: dash 1.5s ease-in-out infinite;
-      stroke-linecap: round;
-      stroke: #ddd;
+    #splash-screen .sk-circle {
+      width: 60px;
+      height: 60px;
+      position: relative;
+      display: inline-block;
     }
 
-    @keyframes rotate {
+    .sk-circle .sk-child {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .sk-circle .sk-child:before {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 15%;
+      height: 15%;
+      background-color: #333333;
+      border-radius: 50%;
+      animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+      -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+    }
+
+    .sk-circle .sk-circle2 {
+      -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+      transform: rotate(30deg);
+    }
+
+    .sk-circle .sk-circle3 {
+      -webkit-transform: rotate(60deg);
+      -ms-transform: rotate(60deg);
+      transform: rotate(60deg);
+    }
+
+    .sk-circle .sk-circle4 {
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+
+    .sk-circle .sk-circle5 {
+      -webkit-transform: rotate(120deg);
+      -ms-transform: rotate(120deg);
+      transform: rotate(120deg);
+    }
+
+    .sk-circle .sk-circle6 {
+      -webkit-transform: rotate(150deg);
+      -ms-transform: rotate(150deg);
+      transform: rotate(150deg);
+    }
+
+    .sk-circle .sk-circle7 {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+
+    .sk-circle .sk-circle8 {
+      -webkit-transform: rotate(210deg);
+      -ms-transform: rotate(210deg);
+      transform: rotate(210deg);
+    }
+
+    .sk-circle .sk-circle9 {
+      -webkit-transform: rotate(240deg);
+      -ms-transform: rotate(240deg);
+      transform: rotate(240deg);
+    }
+
+    .sk-circle .sk-circle10 {
+      -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      transform: rotate(270deg);
+    }
+
+    .sk-circle .sk-circle11 {
+      -webkit-transform: rotate(300deg);
+      -ms-transform: rotate(300deg);
+      transform: rotate(300deg);
+    }
+
+    .sk-circle .sk-circle12 {
+      -webkit-transform: rotate(330deg);
+      -ms-transform: rotate(330deg);
+      transform: rotate(330deg);
+    }
+
+    .sk-circle .sk-circle2:before {
+      -webkit-animation-delay: -1.1s;
+      animation-delay: -1.1s;
+    }
+
+    .sk-circle .sk-circle3:before {
+      -webkit-animation-delay: -1s;
+      animation-delay: -1s;
+    }
+
+    .sk-circle .sk-circle4:before {
+      -webkit-animation-delay: -0.9s;
+      animation-delay: -0.9s;
+    }
+
+    .sk-circle .sk-circle5:before {
+      -webkit-animation-delay: -0.8s;
+      animation-delay: -0.8s;
+    }
+
+    .sk-circle .sk-circle6:before {
+      -webkit-animation-delay: -0.7s;
+      animation-delay: -0.7s;
+    }
+
+    .sk-circle .sk-circle7:before {
+      -webkit-animation-delay: -0.6s;
+      animation-delay: -0.6s;
+    }
+
+    .sk-circle .sk-circle8:before {
+      -webkit-animation-delay: -0.5s;
+      animation-delay: -0.5s;
+    }
+
+    .sk-circle .sk-circle9:before {
+      -webkit-animation-delay: -0.4s;
+      animation-delay: -0.4s;
+    }
+
+    .sk-circle .sk-circle10:before {
+      -webkit-animation-delay: -0.3s;
+      animation-delay: -0.3s;
+    }
+
+    .sk-circle .sk-circle11:before {
+      -webkit-animation-delay: -0.2s;
+      animation-delay: -0.2s;
+    }
+
+    .sk-circle .sk-circle12:before {
+      -webkit-animation-delay: -0.1s;
+      animation-delay: -0.1s;
+    }
+
+    @-webkit-keyframes sk-circleBounceDelay {
+
+      0%,
+      80%,
       100% {
-        transform: rotate(360deg);
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
       }
     }
 
-    @keyframes dash {
-      0% {
-        stroke-dasharray: 1, 200;
-        stroke-dashoffset: 0;
-      }
-      50% {
-        stroke-dasharray: 89, 200;
-        stroke-dashoffset: -35px;
-      }
+    @keyframes sk-circleBounceDelay {
+
+      0%,
+      80%,
       100% {
-        stroke-dasharray: 89, 200;
-        stroke-dashoffset: -124px;
+        -webkit-transform: scale(0);
+        transform: scale(0);
       }
+
+      40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+
+    .default-theme #splash-screen .sk-circle .sk-child:before {
+      background-color: #673ab7;
+    }
+
+    .light-theme #splash-screen .sk-circle .sk-child:before {
+      background-color: #eeeeee;
+    }
+
+    .deeppurple-amber-theme #splash-screen .sk-circle .sk-child:before {
+      background-color: #00695c;
     }
   </style>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
 </head>
-<body>
-<anms-root>
-  <div class="app-loading">
-    <div class="logo">
-      <svg class="spinner" viewBox="25 25 50 50">
-        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-      </svg>
+
+<body class="default-theme">
+  <div id="splash-screen">
+    <div class="sk-circle">
+      <div class="sk-child sk-circle1"></div>
+      <div class="sk-child sk-circle2"></div>
+      <div class="sk-child sk-circle3"></div>
+      <div class="sk-child sk-circle4"></div>
+      <div class="sk-child sk-circle5"></div>
+      <div class="sk-child sk-circle6"></div>
+      <div class="sk-child sk-circle7"></div>
+      <div class="sk-child sk-circle8"></div>
+      <div class="sk-child sk-circle9"></div>
+      <div class="sk-child sk-circle10"></div>
+      <div class="sk-child sk-circle11"></div>
+      <div class="sk-child sk-circle12"></div>
     </div>
   </div>
-</anms-root>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-53234284-5', 'auto');
-</script>
+  <app-root></app-root>
 </body>
+
 </html>

@@ -1,0 +1,37 @@
+<form name="loginForm"
+  autocomplete="off"
+  novalidate
+  [formGroup]="form"
+  (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="outline">
+    <mat-label>{{ 'auth.label.username' | translate }}</mat-label>
+    <input matInput  type="text" placeholder="{{ 'auth.label.username' | translate }}" formControlName="username" />
+    <mat-icon matSuffix>account_circle</mat-icon>
+    <mat-error>
+      <span *ngIf="formErrors.username.required">
+        {{ 'auth.error.username.required' | translate }}
+      </span>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>{{ 'auth.label.password' | translate }}</mat-label>
+    <input matInput autocomplete="off" tabindex="2" type="password" placeholder="{{ 'auth.label.password' | translate }}" formControlName="password" />
+    <mat-icon matSuffix>lock</mat-icon>
+    <mat-error>
+      <span *ngIf="formErrors.password.required">
+          {{ 'auth.error.password.required' | translate }}
+      </span>
+    </mat-error>
+  </mat-form-field>
+
+
+  <div>
+    <span fxFlex></span>
+    <button mat-raised-button tabindex="3" color="accent" type="submit" class="action-button w-100" [disabled]="form.invalid || pending">
+      Login
+    </button>
+  </div>
+
+</form>

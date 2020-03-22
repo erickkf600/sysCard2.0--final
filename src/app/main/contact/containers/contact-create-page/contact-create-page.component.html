@@ -1,0 +1,34 @@
+<div class="page-layout">
+  <div class="top-bg accent"></div>
+
+  <div class="center">
+    <div class="page-header accent"
+      fxLayout="row"
+      fxLayoutAlign="space-between center">
+
+      <div fxLayout="row"
+        fxLayoutAlign="start center"
+        fxLayoutGap="8px">
+        <a mat-icon-button routerLink="../">
+          <mat-icon>arrow_back</mat-icon>
+        </a>
+
+        <h1 class="page-title mat-headline">Create new contact</h1>
+      </div>
+
+      <button mat-raised-button color="primary"
+        [disabled]="(pending$ | async)"
+        (click)="onCreate()">
+        <span>{{ 'general.save' | translate }}</span>
+      </button>
+    </div>
+
+    <div class="page-content" perfectScrollbar>
+      <app-contact-form
+        (save)="onCreate()">
+      </app-contact-form>
+    </div>
+
+  </div>
+
+</div>

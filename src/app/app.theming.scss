@@ -1,0 +1,7 @@
+@import '~@angular/material/theming';
+
+@import './shared/notification/notification.component.theme.scss';
+
+@mixin app-theme($theme) {
+  @include notification-theme($theme);
+}

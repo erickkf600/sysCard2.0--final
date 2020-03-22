@@ -1,0 +1,13 @@
+{
+  "general": {
+    "addNew": "Thêm mới",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "login": "Đăng nhập",
+    "logout": "Đăng xuất",
+    "ok": "Đồng ý",
+    "save": "Lưu",
+    "saveChange": "Lưu thay đổi"
+  }
+}

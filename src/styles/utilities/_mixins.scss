@@ -1,0 +1,34 @@
+@mixin transition($transicao) {
+    -webkit-transition: $transicao;
+    -moz-transition: $transicao;
+    -ms-transition: $transicao;
+    -o-transition: $transicao;
+    transition: $transicao;
+}
+
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == "device" {
+      @media (min-width: 576px) {
+        @content;
+      }
+    }
+    @if $breakpoint == "small" {
+      // 767px
+      @media (min-width: 767px) {
+        @content;
+      }
+    } @else if $breakpoint == "medium" {
+      @media (min-width: 992px) {
+        @content;
+      }
+    } @else if $breakpoint == "large" {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    } @else if $breakpoint == "extra-large"{
+      @media (min-width: 1500px){
+        @content;
+      }
+    }  
+  }

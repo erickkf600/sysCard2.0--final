@@ -1,0 +1,38 @@
+{
+  "auth": {
+    "button": {
+      "login": "Login",
+      "resetPassword": "Reset password",
+      "sendResetLink": "Send reset link",
+      "unlock": "Unlock"
+    },
+    "error": {
+      "confirmPassword": {
+        "mustMatch": "Confirm password does not match the password ",
+        "required": "Password confirmation is required!"
+      },
+      "email": {
+        "invalid": "Please enter a valid email",
+        "required": "Email is required"
+      },
+      "password": {
+        "required": "Password is required"
+      },
+      "username": {
+        "required": "Email is required"
+      }
+    },
+    "label": {
+      "confirmPassword": "Confirm Password:",
+      "email": "Email",
+      "password": "Password",
+      "username": "Email"
+    },
+    "pageTitle": {
+      "forgotPassword": "Recover your password",
+      "lock": "Your session is locked",
+      "login": "Login",
+      "resetPassword": "Reset password"
+    }
+  }
+}

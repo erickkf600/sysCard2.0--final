@@ -1,0 +1,11 @@
+<div>
+  <toolbar [sideMenu]="sideMenu" (toogleSideMenu)="toogleSideMenu($event)"></toolbar>
+  <!-- <nav class="">
+    <sidebar></sidebar>
+  </nav> -->
+  <main [ngClass]="{'toggle': !sideMenu}">
+    <div>
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </main>
+</div>

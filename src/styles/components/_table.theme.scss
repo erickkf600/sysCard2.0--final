@@ -1,0 +1,24 @@
+@mixin table-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $background: map-get($theme, background);
+
+  .mat-table .mat-row {
+    &:nth-of-type(odd) {
+      background-color: mat-color($background, background);
+    }
+
+    &:hover {
+      background-color: mat-color($primary, 50) !important;
+    }
+
+    &.selected {
+      background-color: mat-color($accent, 50) !important;
+
+      &:hover {
+        background-color: mat-color($accent, 100) !important;
+      }
+    }
+  }
+
+}

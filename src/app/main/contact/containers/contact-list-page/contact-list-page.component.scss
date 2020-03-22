@@ -1,0 +1,44 @@
+.actions-bar {
+  background: transparent;
+  position: absolute;
+  z-index: 4;
+  padding: 0 24px;
+  height: 98px;
+  top: 0;
+  left: 0;
+  right: 0px;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(-98px);
+  transition: all 0.5s ease-in-out;
+}
+
+.page-header {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.show-actions-bar {
+  .actions-bar {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .page-header {
+    opacity: 0;
+    transform: translateY(98px);
+  }
+}
+
+.top-bg {
+  background-image: url('/assets/images/navigation-drawer-background-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 65%;
+}
+
+.loading,
+.no-result {
+  margin-top: 100px;
+}

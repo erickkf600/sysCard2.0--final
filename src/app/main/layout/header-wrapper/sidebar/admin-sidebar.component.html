@@ -1,0 +1,71 @@
+<mat-toolbar class="mat-elevation-z2">
+  <mat-toolbar-row class="sidebar-top">
+    <div>
+      <!-- <button mat-icon-button>
+              <mat-icon>menu</mat-icon>
+            </button> -->
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="navbar-container">
+
+
+
+  <div class="nav-group">
+    <div class="group-title">
+      <span class="hint-text">Applications</span>
+    </div>
+
+    <div class="group-items">
+      <div class="nav-item">
+        <a class="nav-link"
+          routerLink="/admin"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}">
+          <mat-icon class="nav-link-icon">dashboard</mat-icon>
+          <span>Overview</span>
+        </a>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link"
+          routerLink="/admin/contacts"
+          routerLinkActive="active">
+          <mat-icon class="nav-link-icon">account_box</mat-icon>
+          <span>Contacts</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="group-title">
+      <span>Documentation</span>
+    </div>
+
+    <div class="group-items">
+      <div class="nav-item">
+        <a class="nav-link">
+          <mat-icon class="nav-link-icon">update</mat-icon>
+          <span>Changelog</span>
+        </a>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link">
+          <mat-icon class="nav-link-icon">import_contacts</mat-icon>
+          <span>Getting Started</span>
+        </a>
+      </div>
+
+      <div class="nav-item">
+        <a class="nav-link">
+          <mat-icon class="nav-link-icon">import_contacts</mat-icon>
+          <span>Services</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>

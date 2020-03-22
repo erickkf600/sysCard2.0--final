@@ -1,0 +1,5 @@
+$app-primary: mat-palette($mat-teal, 800);
+$app-accent: mat-palette($mat-light-blue);
+$app-warn: mat-palette($mat-pink, 600);
+
+$deeppurple-amber-theme: mat-light-theme($app-primary, $app-accent, $app-warn);

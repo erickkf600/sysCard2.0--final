@@ -1,0 +1,13 @@
+{
+  "general": {
+    "addNew": "Add new",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "login": "Login",
+    "logout": "Logout",
+    "ok": "Ok",
+    "save": "Save",
+    "saveChange": "Save change"
+  }
+}

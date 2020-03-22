@@ -1,6 +1,6 @@
 # SysCard
 
-Angular version 9.0.0
+Angular version 8.1.0
 
 Estruturação Lazy Load, MVP e NGRX
 

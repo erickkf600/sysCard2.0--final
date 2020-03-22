@@ -1,0 +1,27 @@
+<mat-toolbar class="mat-elevation-z2">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="toggleSideMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="menu-bar">
+      <button class="menu-button" mat-button [matMenuTriggerFor]="themeMenu">
+        <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">format_color_fill</mat-icon>
+      </button>
+      
+      <p>ERICK FERREIRA</p>
+      <mat-menu #themeMenu="matMenu" xPosition="before">
+        <button mat-menu-item (click)="onLanguageSelect('en')">
+          <img class="language-flag" src="/assets/images/flags/us.png">
+          <span>English (United States)</span>
+        </button>
+      
+        <button mat-menu-item (click)="onLanguageSelect('pt-br')">
+          <img class="language-flag" src="/assets/images/flags/vn.png">
+          <span>Tiếng Việt (Việt Nam)</span>
+        </button>
+      
+      </mat-menu>
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>

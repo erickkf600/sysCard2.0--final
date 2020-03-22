@@ -1,0 +1,45 @@
+<form [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput type="text" formControlName="username" />
+    <mat-error></mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput type="text" formControlName="email" />
+    <mat-error></mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" formControlName="name" />
+    <mat-error></mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Phone number</mat-label>
+    <input matInput type="text" formControlName="phone" />
+    <mat-error></mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Website</mat-label>
+    <input matInput type="text" formControlName="website" />
+    <mat-error></mat-error>
+  </mat-form-field>
+
+  <div formGroupName="address">
+    <mat-form-field appearance="outline">
+      <mat-label>Street</mat-label>
+      <input matInput type="text" formControlName="street" />
+      <mat-error></mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>City</mat-label>
+      <input matInput type="text" formControlName="city" />
+      <mat-error></mat-error>
+    </mat-form-field>
+  </div>
+</form>

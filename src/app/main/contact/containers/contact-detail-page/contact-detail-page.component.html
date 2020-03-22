@@ -1,0 +1,43 @@
+<div class="page-layout">
+  <div class="top-bg accent"></div>
+
+  <div class="center">
+    <div class="page-header accent"
+      *ngIf="contact$ | async as contact"
+      fxLayout="row"
+      fxLayoutAlign="space-between center">
+
+      <div fxLayout="row"
+        fxLayoutAlign="start center"
+        fxLayoutGap="8px">
+        <a mat-icon-button routerLink="../">
+          <mat-icon>arrow_back</mat-icon>
+        </a>
+
+        <h1 class="page-title mat-headline">{{ contact.name }}</h1>
+      </div>
+
+      <div fxLayout="row"
+        fxLayoutAlign="start center"
+        fxLayoutGap="8px">
+        <button mat-raised-button color="primary"
+          *ngIf="contactForm.dirty"
+          (click)="onUpdate()"
+          [disabled]="(saving$ | async) || contactForm.invalid || !contactForm.dirty">
+          <span>{{ 'general.saveChange' | translate }}</span>
+        </button>
+        <button mat-raised-button color="warn" (click)="onDeleteClicked(contact)">
+          <span>{{ 'general.delete' | translate }}</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="page-content" perfectScrollbar>
+      <app-contact-form
+        [contact]="contact$ | async">
+      </app-contact-form>
+    </div>
+
+  </div>
+
+</div>

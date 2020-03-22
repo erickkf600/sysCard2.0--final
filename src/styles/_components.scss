@@ -1,0 +1,5 @@
+@import './components/table.theme';
+
+@mixin components-theme($theme) {
+  @include table-theme($theme);
+}
